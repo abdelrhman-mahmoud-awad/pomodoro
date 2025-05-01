@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+body {
+    background-image:  url(https://wallpapers.com/images/featured/morning-glory-background-up0p4pfddm8382px.jpg);
+    background-size: cover; /* Cover the entire screen */
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
+    color: #ecf0f1; /* Light text for readability */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    position: relative;
+    height: 100vh;
+}
+.main-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 60px;
+    font-family: Bebas Neue;
+}
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px; /* Increased spacing for better layout */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timer {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.timer-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+    background-color: #e74c3c; /* Vibrant red for buttons */
+    border: none;
+    border-radius: 50%; /* Circular buttons */
+    color: #ffffff;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+    transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+    transform: scale(1); /* Reset zoom on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on click */
+}
+
+button svg {
+    width: 28px; /* Slightly larger icons */
+    height: 28px;
+    vertical-align: middle;
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.5); /* Custom focus ring */
+}
+
+.timer-text {
+    font-size: 36px; /* Large timer text */
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-top: 10px;
+}
+
+.settings-button {
+    background-color: #3498db; /* Blue for settings button */
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: rotate(90deg); /* Rotate effect */
 }
